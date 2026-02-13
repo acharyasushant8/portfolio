@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sushant Acharya | Digital Marketing & Video Editing</title>
+  <meta name="description" content="Sushant Acharya — Google Ads (PPC), Social Media Marketing, and Video Editing." />
+
+  <style>
+    :root{
+      --bg:#060913;
+      --panel:#0b1224;
+      --panel2:#0b142a;
+      --text:#f2f6ff;
+      --muted:#a8b4d8;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 18px 55px rgba(0,0,0,.45);
+      --accent1:#5aa2ff;
+      --accent2:#7c5cff;
+      --r:18px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 15% 0%, rgba(90,162,255,.22), transparent 60%),
+        radial-gradient(900px 540px at 85% 10%, rgba(124,92,255,.18), transparent 55%),
+        radial-gradient(900px 520px at 50% 95%, rgba(90,162,255,.10), transparent 60%),
+        var(--bg);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px}
+
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background:rgba(6,9,19,.55);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;gap:14px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:10px;
+      font-weight:950;letter-spacing:.2px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:999px;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      box-shadow:0 0 24px rgba(90,162,255,.35);
+    }
+    .nav-links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{
+      color:var(--muted);
+      font-weight:800;
+      font-size:14px;
+      padding:8px 10px;border-radius:12px;
+    }
+    .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+
+    /* HERO */
+    header{padding:64px 0 22px}
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      align-items:stretch;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:var(--r);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:13px;font-weight:800;
+    }
+    .badge b{color:var(--text)}
+    h1{
+      margin:14px 0 12px;
+      font-size:46px;line-height:1.08;
+      letter-spacing:-.9px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      max-width:70ch;
+    }
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 16px;border-radius:14px;
+      font-weight:950;border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+    }
+    .btn.primary{
+      border:none;color:#071126;
+      background:linear-gradient(135deg,var(--accent1),var(--accent2));
+      box-shadow:0 12px 30px rgba(90,162,255,.22);
+    }
+    .btn.primary:hover{filter:brightness(1.06)}
+    .btn.ghost:hover{background:rgba(255,255,255,.08)}
+
+    .pill{
+      display:inline-flex;align-items:center;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      color:var(--muted);
+      font-size:12px;font-weight:850;
+      margin:6px 8px 0 0;
+    }
+
+    /* SIDE */
+    .avatar-wrap{display:flex;justify-content:center;margin-bottom:14px}
+    .avatar{
+      width:160px;height:160px;border-radius:999px;overflow:hidden;
+      border:2px solid rgba(255,255,255,.14);
+      box-shadow:0 16px 40px rgba(0,0,0,.45);
+      background:rgba(255,255,255,.05);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .side h3{
+      margin:0 0 10px;
+      font-size:13px;letter-spacing:.8px;text-transform:uppercase;
+      color:var(--muted);
+    }
+    .kv{
+      display:flex;justify-content:space-between;gap:12px;
+      padding:10px 0;border-top:1px solid var(--border);
+      color:var(--muted);font-size:14px;
+    }
+    .kv:first-of-type{border-top:none;padding-top:0}
+    .kv b{color:var(--text);font-weight:950}
+
+    /* SECTIONS */
+    section{padding:28px 0}
+    .section-title{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:14px}
+    .section-title h2{margin:0;font-size:22px;letter-spacing:-.2px}
+
+    .grid{display:grid;grid-template-columns:repeat(12, 1fr);gap:14px}
+    .col-12{grid-column:span 12}
+    .col-8{grid-column:span 8}
+    .col-6{grid-column:span 6}
+    .col-4{grid-column:span 4}
+
+    .work h3{margin:0 0 6px;font-size:16px}
+    .work p{margin:0;color:var(--muted);font-size:14px}
+    ul{margin:10px 0 0 18px;color:var(--muted);font-size:14px}
+    li{margin:6px 0}
+
+    .mini-card{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:14px;
+      box-shadow:none;
+    }
+    .mini-card b{display:block;margin-bottom:6px}
+    .mini-card .muted{color:var(--muted);font-size:14px}
+
+    footer{
+      padding:26px 0 34px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width: 900px){
+      h1{font-size:38px}
+      .hero{grid-template-columns:1fr}
+      .col-6,.col-4,.col-8{grid-column:span 12}
+      .nav-links{gap:8px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand"><span class="dot"></span> Sushant Acharya</div>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <div class="hero">
+        <div class="card">
+          <div class="badge">Available for <b>freelance + internships</b></div>
+          <h1>I grow brands with <span style="background:linear-gradient(135deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;">PPC</span>, social media, and clean video edits.</h1>
+          <p class="sub">
+            I’m Sushant Acharya — I help businesses get more inquiries and engagement through Google Ads (PPC), social media marketing, and professional video editing.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#contact">Hire / Collaborate</a>
+            <a class="btn ghost" href="#work">See work</a>
+          </div>
+
+          <div style="margin-top:12px">
+            <span class="pill">Google Ads (PPC)</span>
+            <span class="pill">Social Media</span>
+            <span class="pill">Video Editing</span>
+            <span class="pill">WordPress</span>
+          </div>
+        </div>
+
+        <aside class="card">
+          <div class="avatar-wrap">
+            <div class="avatar">
+              <img src="profile.jpg" alt="Sushant Acharya portrait" />
+            </div>
+          </div>
+
+          <h3 style="margin:0 0 10px;font-size:13px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);">Quick info</h3>
+          <div class="kv"><span>Focus</span><b>Marketing + Video</b></div>
+          <div class="kv"><span>Skills</span><b>PPC • Social • Editing</b></div>
+          <div class="kv"><span>Location</span><b>Kathmandu</b></div>
+          <div class="kv"><span>Languages</span><b>English • Nepali • Hindi</b></div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- WORK -->
+    <section id="work">
+      <div class="container">
+        <div class="section-title">
+          <h2>Selected work</h2>
+        </div>
+
+        <div class="grid">
+          <div class="card work col-6">
+            <h3>Google Ads + Social – Travel & Treks</h3>
+            <div>
+              <span class="pill">Google Ads</span>
+              <span class="pill">Lead generation</span>
+              <span class="pill">Optimization</span>
+            </div>
+            <p>Campaign setup, keyword research, ad copy, and ongoing improvements.</p>
+            <ul>
+              <li>Structured campaigns and ad groups</li>
+              <li>Wrote and tested ad copies</li>
+              <li>Improved targeting and relevance over time</li>
+            </ul>
+          </div>
+
+          <div class="card work col-6">
+            <h3>E-learning Video Editing – MiDas Education</h3>
+            <div>
+              <span class="pill">Premiere Pro</span>
+              <span class="pill">Subtitles</span>
+              <span class="pill">Clean pacing</span>
+            </div>
+            <p>Edited lessons for clarity: cuts, audio cleanup, subtitles, and simple graphics.</p>
+            <ul>
+              <li>Removed mistakes and improved flow</li>
+              <li>Added subtitles and callouts</li>
+              <li>Maintained consistent style</li>
+            </ul>
+          </div>
+
+          <div class="card work col-6">
+            <h3>Social Media Content System</h3>
+            <div>
+              <span class="pill">Facebook</span>
+              <span class="pill">Instagram</span>
+              <span class="pill">Content planning</span>
+            </div>
+            <p>Posting routine + creatives to keep pages active and professional.</p>
+            <ul>
+              <li>Weekly content plan</li>
+              <li>Design + captions</li>
+              <li>Consistency and engagement focus</li>
+            </ul>
+          </div>
+
+          <div class="card work col-6">
+            <h3>WordPress Website Support</h3>
+            <div>
+              <span class="pill">WordPress</span>
+              <span class="pill">Landing pages</span>
+              <span class="pill">Basic SEO</span>
+            </div>
+            <p>Simple landing pages and updates to support marketing campaigns.</p>
+            <ul>
+              <li>Page setup and edits</li>
+              <li>Basic on-page SEO</li>
+              <li>Fast changes for promotions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="grid">
+          <div class="card col-4">
+            <h3 style="margin:0 0 8px">Google Ads (PPC)</h3>
+            <p class="muted" style="margin:0;color:var(--muted)">Setup, keywords, ad copy, optimization, reporting.</p>
+            <div style="margin-top:10px">
+              <span class="pill">Search ads</span><span class="pill">Keywords</span><span class="pill">Optimization</span>
+            </div>
+          </div>
+
+          <div class="card col-4">
+            <h3 style="margin:0 0 8px">Social Media Marketing</h3>
+            <p class="muted" style="margin:0;color:var(--muted)">Content plan, creatives, posting, engagement.</p>
+            <div style="margin-top:10px">
+              <span class="pill">Calendar</span><span class="pill">Creatives</span><span class="pill">Engagement</span>
+            </div>
+          </div>
+
+          <div class="card col-4">
+            <h3 style="margin:0 0 8px">Video Editing</h3>
+            <p class="muted" style="margin:0;color:var(--muted)">E-learning, promos, reels/shorts, subtitles.</p>
+            <div style="margin-top:10px">
+              <span class="pill">Premiere Pro</span><span class="pill">Subtitles</span><span class="pill">Clean edits</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process">
+      <div class="container">
+        <div class="section-title">
+          <h2>Process</h2>
+        </div>
+
+        <div class="grid">
+          <div class="mini-card col-4">
+            <b>1) Goal</b>
+            <div class="muted">We define the goal: leads, sales, views, or engagement.</div>
+          </div>
+          <div class="mini-card col-4">
+            <b>2) Build</b>
+            <div class="muted">I set up campaigns/content/videos and deliver quickly.</div>
+          </div>
+          <div class="mini-card col-4">
+            <b>3) Improve</b>
+            <div class="muted">Weekly optimization + updates to improve results.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="grid">
+          <div class="card col-8">
+            <p style="margin:0">
+              I’m <b>Sushant Acharya</b>. I work in digital marketing and video editing. I like practical work — running PPC campaigns,
+              building consistent content, and editing videos that are clear and engaging.
+            </p>
+            <p style="margin:12px 0 0;color:var(--muted)">
+              My goal is simple: help businesses look professional and get measurable results.
+            </p>
+
+            <div style="margin-top:12px">
+              <span class="pill">Google Ads</span>
+              <span class="pill">SEO / SEM</span>
+              <span class="pill">Email Marketing</span>
+              <span class="pill">Content Marketing</span>
+              <span class="pill">WordPress</span>
+            </div>
+          </div>
+
+          <div class="card col-4">
+            <h3 style="margin:0 0 10px">Strengths</h3>
+            <div class="mini-card" style="margin-bottom:12px">
+              <b>Fast delivery</b>
+              <div class="muted">Quick turnaround and updates.</div>
+            </div>
+            <div class="mini-card">
+              <b>Clear communication</b>
+              <div class="muted">Simple, honest progress.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="grid">
+          <div class="card col-6">
+            <h3 style="margin:0 0 10px">Reach me</h3>
+            <div class="kv"><span>Phone</span><b>9843943580</b></div>
+            <div class="kv"><span>Email</span><b><a href="mailto:sushantacharya15@gmail.com">sushantacharya15@gmail.com</a></b></div>
+            <div class="kv"><span>Location</span><b>Kathmandu</b></div>
+          </div>
+
+          <div class="card col-6">
+            <h3 style="margin:0 0 10px">Quick message</h3>
+            <div class="mini-card">
+              Hi,
+I’m interested in your digital marketing or video editing services.
+
+My goal is to improve my online presence and generate more enquiries for my business.
+
+Please let me know how we can start and what information you need from me.
+
+Thank you.
+            </div>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+              <a class="btn primary" href="mailto:sushantacharya15@gmail.com">Email me</a>
+              <a class="btn ghost" href="#work">See work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+      <span>© 2026 Sushant Acharya</span>
+      <span>Google Ads • Social Media • Video Editing</span>
+    </div>
+  </footer>
+</body>
+</html>
